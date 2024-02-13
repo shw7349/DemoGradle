@@ -1,10 +1,104 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Insert title here</title>
+    <title>메인 페이지 레이아웃</title>
+    <style>
+        /* 기존 스타일 유지 */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            flex: 1;  /* header와 footer에 비교적 적은 공간 할당 */
+            background: #eee; /* header */
+            background: #ddd; /* footer */
+            padding: 20px;
+        }
+
+        footer {
+            flex: 1;  /* header와 footer에 비교적 적은 공간 할당 */
+            background: #eee; /* header */
+            background: #ddd; /* footer */
+            padding: 20px;
+            text-align: right;
+        }
+
+        main {
+            flex: 8;  /* main에 더 많은 공간 할당 */
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo, nav, .left-sidebar, .right-sidebar, .main-content {
+            /* 스타일 유지 */
+        }
+
+        /* 나머지 스타일 */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            text-align: right;
+            gap: 20px;
+        }
+
+        .left-sidebar, .right-sidebar {
+            background: #f0f0f0;
+        }
+
+        .main-content {
+            background: #fff;
+        }
+
+        footer {
+            text-align: right;
+            margin-top: auto;
+        }
+    </style>
 </head>
 <body>
-hello world!!!
+<header>
+    <div class="logo">
+        <h1>웹사이트 로고</h1>
+    </div>
+    <nav>
+        <ul>
+            <li>홈</li>
+            <li>메뉴 1</li>
+            <li>메뉴 2</li>
+            <li>메뉴 3</li>
+            <li>메뉴 4</li>
+            <li>메뉴 5</li>
+            <!-- 추가 메뉴 아이템 -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="left-sidebar">
+        <!-- 왼쪽 사이드바 컨텐츠 -->
+    </div>
+    <div class="main-content">
+        <article>
+            <h2>메인내용</h2>
+            <p>여기에 메인 내용이 들어갑니다...</p>
+        </article>
+    </div>
+    <div class="right-sidebar">
+        <!-- 오른쪽 사이드바 컨텐츠 -->
+    </div>
+</main>
+
+<footer>
+    <p>©2024 회사명. 모든 권리 보유.</p>
+</footer>
 </body>
 </html>
